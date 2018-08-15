@@ -2,19 +2,19 @@
 
     <div class="col-md-6">
         <div class="card card-body">
-            <h3 class="box-title m-b-0">Médico: {{ medico.nombre }}</h3>
+            <h3 class="box-title m-b-0">Documento: {{ medico.nombre }}</h3>
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
                     <form #f="ngForm" ngNativeValidate (ngSubmit)="guardarMedico(f)">
                         <div class="form-group">
-                            <label>Nombre del médico</label>
+                            <label>Nombre del Documento</label>
                             <input [(ngModel)]="medico.nombre" name="nombre" type="text" class="form-control" placeholder="Nombre del médico" required>
                         </div>
 
                         <div class="form-group">
-                            <label>Hospital</label>
+                            <label>Proceso</label>
                             <select (change)="cambioHospital( $event.target.value )" [(ngModel)]="medico.hospital" name="hospital" class="form-control" required>
-                              <option value="">Seleccione Hospital</option>
+                              <option value="">Seleccione Proceso</option>
                               <option *ngFor="let hospital of hospitales" [value]="hospital._id">
                                 {{ hospital.nombre }}
                               </option>
@@ -37,7 +37,7 @@
 
     <div class="col-md-3">
         <div class="card card-body">
-            <h4 class="box-title m-b-0">Hospital</h4>
+            <h4 class="box-title m-b-0">Proceso</h4>
 
             <img [src]="hospital.img | imagen:'hospital'" class="rounded img-fluid">
         </div>
