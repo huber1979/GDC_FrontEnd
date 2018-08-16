@@ -43,9 +43,9 @@ const pagesRoutes: Routes = [
         canActivate: [ AdminGuard ],
         data: { titulo: 'Mantenimiento de Usuarios' }
     },
-    { path: 'hospitales', component: HospitalesComponent, data: { titulo: 'Mantenimiento de Hospitales' } },
-    { path: 'medicos', component: MedicosComponent, data: { titulo: 'Mantenimiento de Médicos' } },
-    { path: 'medico/:id', component: MedicoComponent, data: { titulo: 'Actualizar Médico' } },
+    { path: 'hospitales', component: HospitalesComponent, data: { titulo: 'Actualizacion de Procesos' } },
+    { path: 'medicos', component: MedicosComponent, data: { titulo: 'Actualizacion de Documentoss' } },
+    { path: 'medico/:id', component: MedicoComponent, data: { titulo: 'Actualizar Documento' } },
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
